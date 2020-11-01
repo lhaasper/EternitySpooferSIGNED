@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{833D6C00-E880-452C-9ECA-00F506273F41}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>example</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <ProjectName>Loader</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets" Condition="Exists('packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets')" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>./libs/cryptopp/include;./libs/curl/include;./libs/openssl/include;$(IncludePath)</IncludePath>
+    <LibraryPath>./libs/curl/lib/libcurl.lib;./libs/cryptopp/lib/cryptopp-static.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>./libs/curl/lib/libcurl.lib;./libs/cryptopp/lib/cryptopp-static.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>./libs/cryptopp/include;./libs/curl/include;./libs/openssl/include;$(IncludePath)</IncludePath>
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>./libs/cryptopp/include;./libs/curl/include;./libs/openssl/include;$(IncludePath)</IncludePath>
+    <LibraryPath>./libs/curl/lib/;./libs/cryptopp/lib/;./libs/openssl/lib;./libs/;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\18455\OneDrive\Loader\libs\cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>./libs/cryptopp/lib/cryptopp-static.lib;./libs/curl/lib/libcurl.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;./libs/zlib.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;CURL_STATICLIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>./libs/cryptopp/lib/cryptopp-static.lib;./libs/curl/lib/libcurl.lib;./libs/openssl/lib/libcrypto.lib;./libs/openssl/lib/libssl.lib;./libs/zlib.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <OutputFile>$(OutDir)Loader.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Antidebug\Antidebugging\BeingDebugged.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\CheckRemoteDebuggerPresent.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\CloseHandle_InvalidHandle.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\HardwareBreakpoints.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\IsDebuggerPresent.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\MemoryBreakpoints_PageGuard.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\ModuleBoundsHookCheck.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\NtGlobalFlag.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\OutputDebugStringAPI.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\ProcessHeap_Flags.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\ProcessHeap_ForceFlags.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\SeDebugPrivilege.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\SetHandleInformation_API.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\SharedUserData_KernelDebugger.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\SoftwareBreakpoints.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\TLS_callbacks.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\TrapFlag.cpp" />
+    <ClCompile Include="Antidebug\Antidebugging\WUDF_IsDebuggerPresent.cpp" />
+    <ClCompile Include="Antidebug\Antidumping\ErasePEHeaderFromMemory.cpp" />
+    <ClCompile Include="Antidebug\Antidumping\SizeOfImage.cpp" />
+    <ClCompile Include="Antidebug\API\APIs.cpp" />
+    <ClCompile Include="Antidebug\API\ApiTypeDefs.cpp" />
+    <ClCompile Include="Antidebug\API\Common.cpp" />
+    <ClCompile Include="Antidebug\API\log.cpp" />
+    <ClCompile Include="Antidebug\API\Utils.cpp" />
+    <ClCompile Include="Antidebug\LikewiseAntiDebug.cpp" />
+    <ClCompile Include="Antidebug\Timingattacks\timing.cpp" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="Bytes.hpp" />
+    <ClCompile Include="hwid.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ManualMap.cpp" />
+    <ClCompile Include="Mapper\map.cpp" />
+    <ClCompile Include="Mapper\utilsmapper.cpp" />
+    <ClCompile Include="Spoofer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Antidebug\Antidebugging\BeingDebugged.h" />
+    <ClInclude Include="Antidebug\Antidebugging\CheckRemoteDebuggerPresent.h" />
+    <ClInclude Include="Antidebug\Antidebugging\CloseHandle_InvalidHandle.h" />
+    <ClInclude Include="Antidebug\Antidebugging\HardwareBreakpoints.h" />
+    <ClInclude Include="Antidebug\Antidebugging\IsDebuggerPresent.h" />
+    <ClInclude Include="Antidebug\Antidebugging\MemoryBreakpoints_PageGuard.h" />
+    <ClInclude Include="Antidebug\Antidebugging\ModuleBoundsHookCheck.h" />
+    <ClInclude Include="Antidebug\Antidebugging\NtGlobalFlag.h" />
+    <ClInclude Include="Antidebug\Antidebugging\OutputDebugStringAPI.h" />
+    <ClInclude Include="Antidebug\Antidebugging\pch.h" />
+    <ClInclude Include="Antidebug\Antidebugging\ProcessHeap_Flags.h" />
+    <ClInclude Include="Antidebug\Antidebugging\ProcessHeap_ForceFlags.h" />
+    <ClInclude Include="Antidebug\Antidebugging\SeDebugPrivilege.h" />
+    <ClInclude Include="Antidebug\Antidebugging\SetHandleInformation_API.h" />
+    <ClInclude Include="Antidebug\Antidebugging\SharedUserData_KernelDebugger.h" />
+    <ClInclude Include="Antidebug\Antidebugging\SoftwareBreakpoints.h" />
+    <ClInclude Include="Antidebug\Antidebugging\TLS_callbacks.h" />
+    <ClInclude Include="Antidebug\Antidebugging\TrapFlag.h" />
+    <ClInclude Include="Antidebug\Antidebugging\WUDF_IsDebuggerPresent.h" />
+    <ClInclude Include="Antidebug\Antidumping\ErasePEHeaderFromMemory.h" />
+    <ClInclude Include="Antidebug\Antidumping\SizeOfImage.h" />
+    <ClInclude Include="Antidebug\API\APIs.h" />
+    <ClInclude Include="Antidebug\API\ApiTypeDefs.h" />
+    <ClInclude Include="Antidebug\API\Common.h" />
+    <ClInclude Include="Antidebug\API\log.h" />
+    <ClInclude Include="Antidebug\API\pch.h" />
+    <ClInclude Include="Antidebug\API\Utils.h" />
+    <ClInclude Include="Antidebug\API\VersionHelpers.h" />
+    <ClInclude Include="Antidebug\API\winapifamily.h" />
+    <ClInclude Include="Antidebug\API\WinStructs.h" />
+    <ClInclude Include="Antidebug\Headers.h" />
+    <ClInclude Include="Antidebug\LikewiseAntiDebug.h" />
+    <ClInclude Include="Antidebug\ThreadManager.h" />
+    <ClInclude Include="Antidebug\Timingattacks\timing.h" />
+    <ClInclude Include="Antidebug\xorstr.hpp" />
+    <ClInclude Include="api\c_api.hpp" />
+    <ClInclude Include="api\c_xor.hpp" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="Communication\pipe.h" />
+    <ClInclude Include="ConsoleConfig.h" />
+    <ClInclude Include="hwid.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="ManualMap.h" />
+    <ClInclude Include="Mapper\driverspoof.h" />
+    <ClInclude Include="Mapper\map.h" />
+    <ClInclude Include="Mapper\mapper.h" />
+    <ClInclude Include="Mapper\mapperbytes.h" />
+    <ClInclude Include="Mapper\RunPe\fixIAT.hpp" />
+    <ClInclude Include="Mapper\RunPe\fixReloc.hpp" />
+    <ClInclude Include="Mapper\RunPe\peBase.hpp" />
+    <ClInclude Include="Mapper\RunPe\Spoofer.h" />
+    <ClInclude Include="Mapper\RunPe\targetver.h" />
+    <ClInclude Include="Mapper\utilsmapper.hpp" />
+    <ClInclude Include="pipes.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antidebug\Antidebugging\int2d_x64.asm" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Loader.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Downloads\ZBnQS3nlcDzbxDhCXiy57X3kZII5vQ3jOy01VbnhYWM.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\nlohmann.json.3.9.1\build\native\nlohmann.json.targets'))" />
+  </Target>
+</Project>

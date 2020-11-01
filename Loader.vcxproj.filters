@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Antidebug\Antidebugging\BeingDebugged.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\CheckRemoteDebuggerPresent.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\CloseHandle_InvalidHandle.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\HardwareBreakpoints.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\IsDebuggerPresent.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\MemoryBreakpoints_PageGuard.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\ModuleBoundsHookCheck.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\NtGlobalFlag.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\OutputDebugStringAPI.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\ProcessHeap_Flags.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\ProcessHeap_ForceFlags.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\SeDebugPrivilege.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\SetHandleInformation_API.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\SharedUserData_KernelDebugger.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\SoftwareBreakpoints.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\TLS_callbacks.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\TrapFlag.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidebugging\WUDF_IsDebuggerPresent.cpp">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\LikewiseAntiDebug.cpp">
+      <Filter>Resources\Antidebug</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidumping\ErasePEHeaderFromMemory.cpp">
+      <Filter>Resources\Antidebug\Antidumping</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Antidumping\SizeOfImage.cpp">
+      <Filter>Resources\Antidebug\Antidumping</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\Timingattacks\timing.cpp">
+      <Filter>Resources\Antidebug\Timingattacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\API\APIs.cpp">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\API\ApiTypeDefs.cpp">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\API\log.cpp">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\API\Utils.cpp">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapper\map.cpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Mapper\utilsmapper.cpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="hwid.cpp">
+      <Filter>Resources\hwid</Filter>
+    </ClCompile>
+    <ClCompile Include="Antidebug\API\Common.cpp">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Bytes.hpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Spoofer.cpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualMap.cpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="base64.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="api">
+      <UniqueIdentifier>{d9cee197-056b-42cf-90d9-e2e20d8ad45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{54071b58-74bd-48be-b72d-666dbf7a8ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Antidebug">
+      <UniqueIdentifier>{716ab7f0-38a8-47e8-b957-e2995046514c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Antidebug\Antidebugging">
+      <UniqueIdentifier>{d8f1c0d8-29d3-4bff-8533-a62832f6fbc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Antidebug\Antidumping">
+      <UniqueIdentifier>{bb237082-7e61-4450-b85f-fe438bf4d91a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Antidebug\Timingattacks">
+      <UniqueIdentifier>{f893f530-301d-44c8-9756-191cd18c054a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Antidebug\API">
+      <UniqueIdentifier>{d0314c22-c30d-4dc4-be97-3752fd58bcf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Mapper">
+      <UniqueIdentifier>{de27aed3-9767-490c-bb1b-a914028dcd60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Console">
+      <UniqueIdentifier>{4433a564-9fde-41f9-a105-31b55e19f20f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Communication">
+      <UniqueIdentifier>{1279b13c-02f5-4917-83ec-9db4aca4f49a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Mapper\RunPe">
+      <UniqueIdentifier>{46092e23-ecbc-4422-adcc-ec1fcfaa699e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\hwid">
+      <UniqueIdentifier>{f528857e-e543-454c-931e-1c81215eb8bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="api\c_api.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\BeingDebugged.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\CheckRemoteDebuggerPresent.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\CloseHandle_InvalidHandle.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\HardwareBreakpoints.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\IsDebuggerPresent.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\MemoryBreakpoints_PageGuard.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\ModuleBoundsHookCheck.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\NtGlobalFlag.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\OutputDebugStringAPI.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\pch.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\ProcessHeap_Flags.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\ProcessHeap_ForceFlags.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\SeDebugPrivilege.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\SetHandleInformation_API.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\SharedUserData_KernelDebugger.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\SoftwareBreakpoints.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\TLS_callbacks.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\TrapFlag.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidebugging\WUDF_IsDebuggerPresent.h">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Headers.h">
+      <Filter>Resources\Antidebug</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\LikewiseAntiDebug.h">
+      <Filter>Resources\Antidebug</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\ThreadManager.h">
+      <Filter>Resources\Antidebug</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\xorstr.hpp">
+      <Filter>Resources\Antidebug</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidumping\ErasePEHeaderFromMemory.h">
+      <Filter>Resources\Antidebug\Antidumping</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Antidumping\SizeOfImage.h">
+      <Filter>Resources\Antidebug\Antidumping</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\Timingattacks\timing.h">
+      <Filter>Resources\Antidebug\Timingattacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\APIs.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\ApiTypeDefs.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\log.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\pch.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\Utils.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\VersionHelpers.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\winapifamily.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\WinStructs.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleConfig.h">
+      <Filter>Resources\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\driverspoof.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\map.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\mapper.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\utilsmapper.hpp">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Communication\pipe.h">
+      <Filter>Resources\Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="hwid.h">
+      <Filter>Resources\hwid</Filter>
+    </ClInclude>
+    <ClInclude Include="Antidebug\API\Common.h">
+      <Filter>Resources\Antidebug\API</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\RunPe\fixIAT.hpp">
+      <Filter>Resources\Mapper\RunPe</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\RunPe\fixReloc.hpp">
+      <Filter>Resources\Mapper\RunPe</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\RunPe\peBase.hpp">
+      <Filter>Resources\Mapper\RunPe</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\RunPe\Spoofer.h">
+      <Filter>Resources\Mapper\RunPe</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\RunPe\targetver.h">
+      <Filter>Resources\Mapper\RunPe</Filter>
+    </ClInclude>
+    <ClInclude Include="api\c_xor.hpp">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="ManualMap.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper\mapperbytes.h">
+      <Filter>Resources\Mapper</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="base64.h">
+      <Filter>Resources\Antidebug</Filter>
+    </ClInclude>
+    <ClInclude Include="pipes.h">
+      <Filter>Resources\Communication</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Antidebug\Antidebugging\int2d_x64.asm">
+      <Filter>Resources\Antidebug\Antidebugging</Filter>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Loader.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Downloads\ZBnQS3nlcDzbxDhCXiy57X3kZII5vQ3jOy01VbnhYWM.ico" />
+  </ItemGroup>
+</Project>
